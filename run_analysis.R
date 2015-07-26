@@ -1,7 +1,9 @@
-## clean workspace
+## 0. clean workspace
 rm(list=ls()) #remove all variables
 dev.off() #close plot
-setwd("/Users/kaser/Documents/coursera/DataScience/1_TheDataScientistsToolbox/GitHub/getting_and_cleaning_data_project/UCI HAR Dataset/")
+
+# set your working direcory where the project data is here:
+# setwd("Your_data_directory_here")
 
 library(plyr)
 library(dplyr)
@@ -85,13 +87,6 @@ new_Data<-aggregate(mean_and_std_data[3:dim(mean_and_std_data)[2]],by=list(mean_
 new_Data<-rename(new_Data,activity=Group.1,subject=Group.2)
 new_Data<-arrange(new_Data,as.numeric(subject))
 
-setwd("/Users/kaser/Documents/coursera/DataScience/1_TheDataScientistsToolbox/GitHub/getting_and_cleaning_data_project/UCI HAR Dataset/")
 
 write.table(new_Data,"newData.txt", row.names = FALSE)
-## to do:
-# Write Code book and readme files
-# why did I choose mean and not mean() maybe change that!
-# give better names maybe watch that part of week 4
-# wite in Readme what packages/libraries are needed and that the data needs to be downloaded and unpacked from the following webpage and that the setpath in the third line needs to be set accordingly if one once to run the R script
-# removed BodyBody because it did not seem to be necessary
-##units, mentione that none was found (all seem to be in dbl)
+
