@@ -12,7 +12,8 @@
 	+ For all the variables exists a mean and standard deviation measure
 
 	+ Most of the variables have a measure in x, y and z direction
-## The following renaming was done to get from "features.txt" to more descriptive variable names:
+
+### The following renaming was done to get from "features.txt" to more descriptive variable names:
 
 * 'BodyBody' was renamed to 'Body' because it seemed a mistake and not necessary
 * the 't' in the beginning of the names was translated to 'time domain'
